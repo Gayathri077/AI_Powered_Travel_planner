@@ -46,6 +46,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 🌍 Main Title
+st.set_page_config(layout="centered", page_icon='✈️', page_title="Travel Planner")
 st.markdown('<h1 style="text-align: center;color:rgb(255, 51, 238);font-weight: bold; ">✈️ AI-Powered Travel Planner 🛬</h1>', unsafe_allow_html=True)
 st.markdown('<p class="subheader">Plan your dream vacation in seconds! 🚀</p>', unsafe_allow_html=True)
 
