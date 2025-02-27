@@ -22,7 +22,7 @@ model = ChatGoogleGenerativeAI(api_key=my_api_key, model="gemini-1.5-flash", tem
 
 # Creating prompt template
 chat_prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are an AI-powered travel planner designed to provide users with comprehensive, personalized travel plans. Your goal is to make travel planning easy, efficient, and enjoyable by offering detailed itineraries, cost estimates, booking suggestions, and local tips."),
+    ("system", "You are an AI-powered travel planner designed to provide users with comprehensive, personalized travel plans. Your goal is to make travel planning easy, efficient, and enjoyable by offering understandable itineraries in one to two lines breifly, cost estimates, booking suggestions,weather and local tips."),
     ("human", "Plan a trip from {source} to {destination} for {days} days. Budget: {budget}. Group: {people}. Interests: {interests}.")
 ])
 
