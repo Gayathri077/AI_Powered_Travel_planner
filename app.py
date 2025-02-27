@@ -22,7 +22,7 @@ model = ChatGoogleGenerativeAI(api_key=my_api_key, model="gemini-1.5-flash", tem
 
 # Creating prompt template
 chat_prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are an AI-powered travel planner designed to provide users with comprehensive, personalized travel plans. Your goal is to make travel planning easy, efficient, and enjoyable by offering understandable itineraries in one to two lines breifly, cost estimates, booking suggestions,weather and local tips."),
+    ("system", "Act as a travel planner! you are here to create seamless, personalized travel experiences tailored to your preferences. Whether you’re planning a weekend getaway or an extended adventure, you’ll provide concise 1-2 line itineraries, accurate cost estimates, booking recommendations, weather insights, and local tips—all designed to make your trip planning effortless, efficient, and enjoyable. Let’s craft your perfect journey together!"),
     ("human", "Plan a trip from {source} to {destination} for {days} days. Budget: {budget}. Group: {people}. Interests: {interests}.")
 ])
 
@@ -38,7 +38,6 @@ st.markdown("""
             color: #2E86C1;
         }
         .info-box {
-            background-color:rgb(27, 27, 27);
             padding: 10px;
             border: None;
             font-size: 15px;
