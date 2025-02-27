@@ -5,6 +5,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 
+st.set_page_config(layout="centered", page_icon='✈️', page_title="Travel Planner")
 # Load environment variables
 load_dotenv()  
 
@@ -45,12 +46,11 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 🌍 Main Title
-st.set_page_config(layout="centered", page_icon='✈️', page_title="Travel Planner")
+# Main Title
 st.markdown('<h1 style="text-align: center;color:rgb(255, 51, 238);font-weight: bold; ">✈️ AI-Powered Travel Planner 🛬</h1>', unsafe_allow_html=True)
 st.markdown('<p class="subheader">Plan your dream vacation in seconds! 🚀</p>', unsafe_allow_html=True)
 
-# ✨ Travel Input Section
+#Travel Input Section
 st.markdown("### 📝 Fill your travel details:")
 source = st.text_input("📍 Enter city:")
 destination = st.text_input("🎯 Enter destination city:")
@@ -59,7 +59,7 @@ budget = st.selectbox("💰 What’s your budget?", ["", "Low-Budget", "Mid-Rang
 people = st.selectbox("👨‍👩‍👦 How many people are traveling?", ["Solo 🚶🏻‍♀️‍➡️", "Couple 🧑🏻‍🤝‍👩🏻", "Family 👪"])
 interests = st.selectbox("🎭 What are your interests? " , ["","Food 🍕", "Culture 🥻", "Adventure 🏄🏻", " Shopping 🛍️", "Temple 📿"])
 
-# 🚀 Generate Travel Plan button
+#Generate Travel Plan button
 if st.button("Make Travel Plan ! 🚀"):
     # Prepare input for the prompt
     raw_input = {
