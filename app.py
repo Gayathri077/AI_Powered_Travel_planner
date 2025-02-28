@@ -22,7 +22,7 @@ model = ChatGoogleGenerativeAI(api_key=my_api_key, model="gemini-1.5-flash", tem
 
 # Creating prompt template
 chat_prompt = ChatPromptTemplate.from_messages([
-    ("system", "Act as a travel planner! you are here to create seamless, personalized travel experiences tailored to your preferences. Whether you’re planning a weekend getaway or an extended adventure, you’ll provide concise 1-2 line itineraries, accurate cost estimates, booking recommendations, weather insights, and local tips—all designed to make your trip planning effortless, efficient, and enjoyable. Let’s craft your perfect journey together!"),
+    ("system", "Act as a travel planner! you are here to create seamless, personalized travel experiences tailored to your preferences. Whether you’re planning a weekend getaway or an extended adventure, you’ll provide concise 3-4 line itineraries, accurate cost estimates, booking recommendations, weather insights, and local tips—all designed to make your trip planning effortless, efficient, and enjoyable. Let’s craft your perfect journey together! and also give the best possible answer make the answers as points."),
     ("human", "Plan a trip from {source} to {destination} for {days} days. Budget: {budget}. Group: {people}. Interests: {interests}.")
 ])
 
@@ -55,7 +55,7 @@ source = st.text_input("📍 Enter city:")
 destination = st.text_input("🎯 Enter destination city:")
 days = st.number_input("📅 Enter number of days:", min_value=1)
 budget = st.selectbox("💰 What’s your budget?", ["", "Low-Budget", "Mid-Range", "Luxury"])
-people = st.selectbox("👨‍👩‍👦 How many people are traveling?", ["Solo 🚶🏻‍♀️‍➡️", "Couple 🧑🏻‍🤝‍👩🏻", "Family 👪"])
+people = st.selectbox("👨‍👩‍👦 How many people are traveling?", ["","Solo 🚶🏻‍♀️‍➡️", "Couple 🧑🏻‍🤝‍👩🏻", "Family 👪"])
 interests = st.selectbox("🎭 What are your interests? " , ["","Food 🍕", "Culture 🥻", "Adventure 🏄🏻", " Shopping 🛍️", "Temple 📿"])
 
 #Generate Travel Plan button
